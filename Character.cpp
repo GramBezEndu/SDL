@@ -59,10 +59,13 @@ void Character::Character_Controller(Window &obj)
             {
                  case SDLK_RIGHT:
                     this -> PosX+=5;
+                    random.x = PosX;
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
                     //SDL_RenderClear(obj.renderer);
                     //SDL_RenderCopy(obj.renderer, newTexture, &random, &random);
                     //body.apply_texture(obj, "idle.png", PosX, 348 ,34 ,75, 5, 14, 23, 50);
+                    //SDL_RenderClear(obj.renderer);
+                    SDL_RenderCopy(obj.renderer, Texture, NULL, &random);
                     std::cout << "right: PosX= " << this -> PosX << '\n';
                     break;
 
@@ -80,8 +83,9 @@ void Character::Character_Controller(Window &obj)
                     //body.apply_texture(obj, "idle.png", PosX, 348 ,34 ,75, 5, 14, 23, 50);
                     ///Detach
                     //SDL_SetRenderTarget(obj.renderer, NULL);
-                    SDL_RenderClear(obj.renderer);
-                    SDL_RenderCopy(obj.renderer, Texture, NULL, &random);
+                    //SDL_RenderClear(obj.renderer);
+                    //SDL_RenderCopy(obj.renderer, Texture, NULL, &random);
+                    SDL_RenderCopyEx(obj.renderer, Texture, NULL, &random, 0, NULL, SDL_FLIP_HORIZONTAL);
                     std::cout << "left: PosX= " <<  this -> PosX << " PosY= " << this -> PosY << '\n';
                     break;
 
