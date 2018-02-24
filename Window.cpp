@@ -8,6 +8,9 @@ Window::Window(char* name, int x, int y, int width, int height, int Fullscreen)
         ///Set screen width and heigth
         this -> SCREEN_WIDTH = width;
         this -> SCREEN_HEIGHT = height;
+        ///Level size
+        this -> Level_width = 1200;
+        this -> Level_height = 480;
         ///Scale
         int w;
         int h;

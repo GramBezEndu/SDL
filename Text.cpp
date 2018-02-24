@@ -47,5 +47,6 @@ bool Text::apply_text(Window &obj, std::string _text, int x, int y)
     {
         Window::Quit();
     }
+    return success;
 }
 

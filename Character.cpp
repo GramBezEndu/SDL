@@ -58,7 +58,10 @@ void Character::Character_Controller(Window &obj)
             switch ( event.key.keysym.sym )
             {
                  case SDLK_RIGHT:
-                    this -> PosX+=5;
+                    if ( PosX+5 <= obj.Level_width)
+                    {
+                        this -> PosX+=5;
+                    }
                     random.x = PosX;
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
                     //SDL_RenderClear(obj.renderer);
@@ -71,7 +74,10 @@ void Character::Character_Controller(Window &obj)
 
                 case SDLK_LEFT:
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
-                    this -> PosX-=5;
+                    if ( PosX-5 >= 10 )
+                    {
+                        this -> PosX-=5;
+                    }
                     random.x = PosX;
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
                     //SDL_RenderClear(obj.renderer);

@@ -1,10 +1,10 @@
+#ifndef SCENE_H_INCLUDED
+#define SCENE_H_INCLUDED
+
 #include "Window.h"
 #include "Texture.h"
 #include "Text.h"
 #include "Character.h"
-
-#ifndef SCENE_H_INCLUDED
-#define SCENE_H_INCLUDED
 
 class Scene
 {

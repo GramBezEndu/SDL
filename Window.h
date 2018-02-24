@@ -23,6 +23,8 @@ class Window
         int SCREEN_WIDTH;  ///ScreenWidth 854
         int SCREEN_HEIGHT; ///ScreenHeight 480
     public:
+        int Level_width;//
+        int Level_height;//
         ///Window
         SDL_Renderer* renderer;
         ///Create window

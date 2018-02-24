@@ -165,6 +165,7 @@ bool Scene::handle_events(Window &obj)
                         }
                         if (Button[0].check_mouse_collision() )
                         {
+                            //std::cout << "Y\n";
                             if (event.type == SDL_MOUSEBUTTONDOWN)
                             {
                                     this -> scene_number = Scene::GAME;
