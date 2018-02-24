@@ -1,0 +1,32 @@
+Unable to load image! SDL_image Error: Out of memory
+Unable to create texture from ../SDL_2018/textures/! SDL Error: SDL_CreateTextureFromSurface() passed NULL surface
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to load image! SDL_image Error: Out of memory
+Unable to create texture from ../SDL_2018/textures/! SDL Error: SDL_CreateTextureFromSurface() passed NULL surface
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture
+Unable to create texture from ../SDL_2018/textures/! SDL Error: Out of memory
+Could not show texture! SDL Error: Invalid texture
+Scene: Could not apply texture! Invalid texture

@@ -1,0 +1,12 @@
+WindowPosX 128
+WindowPosY 128
+_AspectRatio 0
+ScreenWidth 854
+ScreenHeight 480
+_VSync 1
+Fullscreen 0
+_FrameRateLimit 144
+_MouseSensitivity 70
+_InvertY 0
+MusicVolume 2
+_SoundVolume 1
