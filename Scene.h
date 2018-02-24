@@ -18,7 +18,7 @@ class Scene
         bool play_music();
         int MusicVolume;
         ///Scene
-        bool scene_loaded;
+        static bool scene_loaded;
         enum SCENE_NUMBER
         {
             MAIN_MENU,

@@ -6,11 +6,9 @@
 class Character
 {
     private:
-        int PosX;
-        int PosY;
         ///Image source
         std::string name;
-        ///x y w h
+        ///Character x, y, w, h
         SDL_Rect random;
     public:
         bool apply_character(Window &, std::string , int, int, int, int, int, int, int, int);

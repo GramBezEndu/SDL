@@ -5,12 +5,10 @@ Texture body;
 bool Character::apply_character(Window &obj, std::string _name, int x, int y, int w, int h, int x2, int y2, int w2, int h2)
 {
     this -> name.assign(_name);
-    this -> PosX = x;
-    this -> PosY = y;
-    this -> random.x = x2;
-    this -> random.y = y2;
-    this -> random.w = w2;
-    this -> random.h = h2;
+    this -> random.x = x;
+    this -> random.y = y;
+    this -> random.w = w;
+    this -> random.h = h;
     if ( !body.apply_texture(obj, _name, random.x, random.y, random.w, random.h, x2, y2, w2, h2) )
         return false;
     return true;
@@ -42,9 +40,6 @@ void Character::Character_Controller(Window &obj)
     ///Get rid of old loaded surface
     SDL_FreeSurface( loadedSurface );
 
-    /*///newTexture - RenderTarget
-    SDL_Texture* newTexture = SDL_CreateTexture(obj.renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 854, 480);*/
-
 
     SDL_Event event;
     while( SDL_PollEvent( &event ) != 0 )
@@ -58,27 +53,34 @@ void Character::Character_Controller(Window &obj)
             switch ( event.key.keysym.sym )
             {
                  case SDLK_RIGHT:
-                    if ( PosX+5 <= obj.getLevelWidth() )
+                    if ( this -> random.x+5 <= obj.getLevelWidth() )
                     {
-                        this -> PosX+=5;
+                        this -> random.x+=5;
                     }
-                    random.x = PosX;
+                    if (random.x >= 700)
+                    {
+                        Texture::PosX += 10;
+                        Scene::scene_loaded = false;
+                        std::cout << Scene::scene_loaded << '\n';
+                    }
+                    random.x = this -> random.x;
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
                     //SDL_RenderClear(obj.renderer);
                     //SDL_RenderCopy(obj.renderer, newTexture, &random, &random);
                     //body.apply_texture(obj, "idle.png", PosX, 348 ,34 ,75, 5, 14, 23, 50);
                     //SDL_RenderClear(obj.renderer);
+                    //Scene::scene_loaded = false;
                     SDL_RenderCopy(obj.renderer, Texture, NULL, &random);
-                    std::cout << "right: PosX= " << this -> PosX << '\n';
+                    std::cout << "right: random.x= " << this -> random.x << '\n';
                     break;
 
                 case SDLK_LEFT:
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
-                    if ( PosX-5 >= 10 )
+                    if ( random.x >= 10 )
                     {
-                        this -> PosX-=5;
+                        this -> random.x-=5;
                     }
-                    random.x = PosX;
+                    random.x = this -> random.x;
                     //SDL_SetRenderTarget(obj.renderer, newTexture);
                     //SDL_RenderClear(obj.renderer);
                     //SDL_SetRenderTarget(obj.renderer, NULL);
@@ -92,7 +94,7 @@ void Character::Character_Controller(Window &obj)
                     //SDL_RenderClear(obj.renderer);
                     //SDL_RenderCopy(obj.renderer, Texture, NULL, &random);
                     SDL_RenderCopyEx(obj.renderer, Texture, NULL, &random, 0, NULL, SDL_FLIP_HORIZONTAL);
-                    std::cout << "left: PosX= " <<  this -> PosX << " PosY= " << this -> PosY << '\n';
+                    std::cout << "left: random.x= " <<  this -> random.x << " random.y= " << this -> random.y << '\n';
                     break;
 
                 default:

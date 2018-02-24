@@ -20,8 +20,10 @@ class Window
         ///Scale
         float scale_width;
         float scale_height;
+        ///Screen dimension
         int SCREEN_WIDTH;  ///ScreenWidth 854
         int SCREEN_HEIGHT; ///ScreenHeight 480
+        ///Level dimension
         int Level_width; ///1200
         int Level_height; ///480
     public:
@@ -36,6 +38,8 @@ class Window
         static void Quit();
         int getLevelWidth();
         int getLevelHeight();
+        int getWindowWidth();
+        int getWindowHeight();
 };
 
 #endif // WINDOW_H_INCLUDED

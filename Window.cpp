@@ -122,3 +122,12 @@ void Window::Quit()
 {
     running = false;
 }
+
+int Window::getWindowWidth()
+{
+    return this -> SCREEN_WIDTH;
+}
+int Window::getWindowHeight()
+{
+    return this -> SCREEN_HEIGHT;
+}

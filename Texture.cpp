@@ -1,5 +1,8 @@
 #include "Texture.h"
 
+int Texture::PosX = 0;
+int Texture::PosY = 0;
+
 ///Apply texture (name, dstrect, source)
 bool Texture::apply_texture(Window &obj, std::string _name, int x, int y, int w, int h, int x2, int y2, int w2, int h2)
 {
@@ -14,8 +17,8 @@ bool Texture::apply_texture(Window &obj, std::string _name, int x, int y, int w,
 
     ///Destination Rect
     SDL_Rect dstrect;
-    dstrect.x=x;
-    dstrect.y=y;
+    dstrect.x=x - PosX;
+    dstrect.y=y - PosY;
     dstrect.w=w;
     dstrect.h=h;
 
@@ -120,3 +123,20 @@ bool Texture::check_mouse_collision()
     //printf("Y");
     return true;
 }
+
+int Texture::getCameraPosX()
+{
+    return this -> PosX;
+}
+
+int Texture::getCameraPosY()
+{
+    return this -> PosY;
+}
+
+void Texture::setCamera()
+{
+    //Camera.x = 200;
+    //Camera.y = 0;
+}
+

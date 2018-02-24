@@ -17,10 +17,11 @@ Texture Box;
 Texture Trolley;
 Texture Boombox;
 
+    bool Scene::scene_loaded = false;
+
 Scene::Scene(int volume)
 {
     this -> MusicVolume = volume;
-    this -> scene_loaded = false;
 }
 
 void Scene::load_scene(Window &obj)
@@ -136,7 +137,8 @@ void Scene::load_scene(Window &obj)
                 fprintf(Error::error, "Scene: Could not apply texture! %s\n", SDL_GetError() );
                 Window::Quit();
             }
-            if ( !character.apply_character(obj, "idle.png", 740, 348 ,34 ,75, 5, 14, 23, 50) )
+            ///Player
+            if ( !character.apply_character(obj, "idle.png", 740, 148 ,34 ,75, 5, 14, 23, 50) )
             {
                 fprintf(Error::error, "Scene: Could not apply texture! %s\n", SDL_GetError() );
                 Window::Quit();
