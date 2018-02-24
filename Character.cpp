@@ -58,7 +58,7 @@ void Character::Character_Controller(Window &obj)
             switch ( event.key.keysym.sym )
             {
                  case SDLK_RIGHT:
-                    if ( PosX+5 <= obj.Level_width)
+                    if ( PosX+5 <= obj.getLevelWidth() )
                     {
                         this -> PosX+=5;
                     }

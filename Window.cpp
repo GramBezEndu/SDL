@@ -108,6 +108,16 @@ bool Window::IsRunning()
     return running;
 }
 
+int Window::getLevelWidth()
+{
+    return this -> Level_width;
+}
+
+int Window::getLevelHeight()
+{
+    return this -> Level_height;
+}
+
 void Window::Quit()
 {
     running = false;

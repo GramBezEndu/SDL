@@ -22,9 +22,9 @@ class Window
         float scale_height;
         int SCREEN_WIDTH;  ///ScreenWidth 854
         int SCREEN_HEIGHT; ///ScreenHeight 480
+        int Level_width; ///1200
+        int Level_height; ///480
     public:
-        int Level_width;//
-        int Level_height;//
         ///Window
         SDL_Renderer* renderer;
         ///Create window
@@ -34,6 +34,8 @@ class Window
         static bool IsRunning();
         ///Quit
         static void Quit();
+        int getLevelWidth();
+        int getLevelHeight();
 };
 
 #endif // WINDOW_H_INCLUDED
